@@ -70,7 +70,12 @@ function App() {
             <div className="info-box">
               <p><strong>Date:</strong> {moonData.date}</p>
               <p><strong>Phase:</strong> {moonData.Phase}</p>
-              <p><strong>Illumination:</strong> {moonData.Illumination || 'N/A'}%</p>
+              <p>
+                <strong>Illumination:</strong> {moonData.Illum
+                  ? (parseFloat(moonData.Illum) * 100).toFixed(1)
+                  : 'N/A'}%
+              </p>
+
             </div>
           </>
         )}
